@@ -6,6 +6,8 @@ const morgan = require('morgan');
 const notice = require('./router/notic.router');
 const gallary = require('./router/gallary.router');
 const teacher = require('./router/teacher.router');
+const committee = require('./router/committee.router');
+const spech = require('./router/spech.router');
 require('dotenv').config();
 
 const app = express();
@@ -24,6 +26,10 @@ app.use(result);
 app.use(notice);
 // teacher
 app.use(teacher);
+// committee
+app.use(committee);
+// Spech
+app.use(spech)
 // gallary 
 app.use(gallary);
 
