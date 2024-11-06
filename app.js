@@ -1,6 +1,9 @@
 const express = require('express');
 const cors = require('cors');
 const studentrouter = require('./router/student.router');
+const result = require('./router/result.router');
+const morgan = require('morgan');
+const notice = require('./router/notic.router');
 require('dotenv').config();
 
 const app = express();
@@ -8,10 +11,15 @@ const app = express();
 app.use(express.urlencoded({extended:true}));
 app.use(express.json());
 app.use(cors());
+app.use(morgan('dev'))
 
 
 // student router
 app.use(studentrouter);
+// result router
+app.use(result);
+// notice Bord
+app.use(notice);
 
 
 
