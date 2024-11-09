@@ -11,8 +11,8 @@ const titleDescriptionSchema = mongoose.Schema({
   description: {
     type: String,
     required: true,
-    minlength: 10, 
-    maxlength: 500, 
+    // minlength: 10,
+    // maxlength: 500, 
     trim: true, 
   }
 }, {

@@ -9,7 +9,7 @@ const studentSchema = new mongoose.Schema({
         maxlength: 50
     },
     class: {
-        type: String,
+        type: Number,
         required: true,
         trim: true,
         minlength: 1,
@@ -40,8 +40,8 @@ const studentSchema = new mongoose.Schema({
         type: String,
         required: true,
         trim: true,
-        match: [/^01[3-9]\d{8}$/, 'Please enter a valid Bangladeshi mobile number'],  // Validates for a 10-digit mobile number
-        unique: true
+        // match: [/^01[3-9]\d{8}$/, 'Please enter a valid Bangladeshi mobile number'],  // Validates for a 10-digit mobile number
+        // unique: true
     }
 });
 const Student = mongoose.model('Student', studentSchema);
